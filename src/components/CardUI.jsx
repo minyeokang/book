@@ -18,8 +18,8 @@ export default function MediaControlCard() {
   const increment = () => {
     setMotion(true);
     console.log(motion);
-    console.log("hi");
   };
+  console.log(import.meta.env.VITE_KEY);
   const handleSearch = async () => {
     try {
       const response = await axios.get(
@@ -30,7 +30,7 @@ export default function MediaControlCard() {
             query: query,
           },
           headers: {
-            Authorization: "KakaoAK a2fc33d47a3d0872dc0a94f9853b4954",
+            Authorization:  import.meta.env.VITE_KEY,
           },
         }
       );

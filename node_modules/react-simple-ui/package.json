@@ -1,0 +1,77 @@
+{
+  "name": "react-simple-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UtillYou/reactSimpleUI.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "dist": "webpack --config ./webpack.config.build.js  --mode production",
+    "compile": "gulp",
+    "docs": "npx styleguidist server",
+    "docs:html": "npx styleguidist build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wushengsong",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/enquire.js": "^2.1.2",
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.2",
+    "@types/webpack-env": "^1.13.9",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^5.0.1",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "less-plugin-npm-import": "^2.1.0",
+    "merge2": "^1.2.3",
+    "mini-css-extract-plugin": "^0.6.0",
+    "react-docgen-typescript": "^1.12.4",
+    "react-hot-loader": "^4.8.3",
+    "react-styleguidist": "^9.0.8",
+    "rimraf": "^2.6.3",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "through2": "^3.0.1",
+    "tslint": "^5.15.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.4.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "enquire.js": "^2.1.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "sideEffects": [
+    "dist/*",
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.less"
+  ]
+}
