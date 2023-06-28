@@ -19,7 +19,6 @@ export default function MediaControlCard() {
     setMotion(true);
     console.log(motion);
   };
-  console.log(import.meta.env.VITE_KEY);
   const handleSearch = async () => {
     try {
       const response = await axios.get(
@@ -30,13 +29,12 @@ export default function MediaControlCard() {
             query: query,
           },
           headers: {
-            Authorization:  import.meta.env.VITE_KEY,
+            Authorization:  `KakaoAK ${import.meta.env.VITE_KEY}`,
           },
         }
       );
 
       const msg = response.data;
-      console.log(msg);
 
       if (!msg.documents || msg.documents.length === 0) {
         console.log("undefined!!!");
